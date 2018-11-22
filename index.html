@@ -3,7 +3,10 @@
     <head>
         <meta charset='utf-8'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src='hash_log.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/aes-min.js"></script>
+        <script src='click_log.js'></script>
+        <script src='generate_hash.js'></script>
     </head>
     <body>
         <h3 id='display' style="background-color: black; color:white;">
@@ -21,5 +24,11 @@
         <h1>
             <button >NoName Button</button>
         </h1>
+        <script>
+            var inp = encodeString("안녕하세요", "seed");
+            console.log(inp.toString());
+            var out = decodeString(inp, "seed");
+            console.log(out);
+        </script>
     </body>
 </html>
